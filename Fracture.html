@@ -1,0 +1,658 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="overlay">
+  <div id="user-agreement-form">
+    <div id="user-agreement-text"> <!-- separate div for the text -->
+      <h2>User Agreement</h2>
+      <p class="user-agreement-text">Fracture acknowledges and agrees that it is solely responsible for the distribution of any files that circumvent school restrictions and violate school policies. Fracture also agrees to indemnify and hold harmless any creator or developer of such files from any and all claims, demands, liabilities, damages, losses, costs, and expenses (including reasonable attorney's fees) arising out of or in connection with the distribution or use of such files.
+<br>
+<br>
+Furthermore, Fracture understands and acknowledges that the distribution of such files may violate school policies and regulations, and may result in disciplinary action, legal consequences, or other penalties. Fracture assumes all risks associated with the distribution and use of such files and agrees to defend, indemnify and hold harmless the creator or developer of such files from any and all claims, damages, liabilities, losses, costs and expenses, including reasonable attorneys' fees, arising out of or in connection with any use or distribution of the files.
+<br>
+<br>
+By downloading or using any of the files distributed by Fracture, users agree to assume all risks and responsibilities associated with their use, and agree to hold harmless the creator or developer of such files from any and all claims, damages, liabilities, losses, costs and expenses, including reasonable attorneys' fees, arising out of or in connection with the use or distribution of the files.</p>
+    </div>
+    <button id="close-button">I Agree</button>
+  </div>
+</div>
+
+
+
+<style>
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #CF00FF;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-agreement-form {
+  position: relative;
+  z-index: 10000;
+  background-color: #8F00B0;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#user-agreement-text {
+  font-size: 15px;
+  overflow-x: scroll;
+  width: 720px;
+}
+
+#user-agreement-text::-webkit-scrollbar {
+  width: 10px;
+}
+
+#user-agreement-text::-webkit-scrollbar-track {
+  background-color: transparent; /* set the scrollbar track to transparent */
+}
+
+#user-agreement-text::-webkit-scrollbar-thumb {
+  background-color: #A400B0; /* set the scrollbar thumb color */
+  border-radius: 5px;
+}
+
+
+
+#close-button {
+  margin-top: 20px;
+}
+
+</style>
+<script>
+// get the overlay and user agreement form elements
+var overlay = document.getElementById('overlay');
+var closeButton = document.getElementById('close-button');
+
+// hide the overlay and user agreement form by default
+overlay.style.opacity = '1';
+
+// add a click event listener to the close button
+closeButton.addEventListener('click', function() {
+  // gradually decrease the opacity of the overlay
+  var intervalId = setInterval(function() {
+    overlay.style.opacity -= 0.1;
+    if (overlay.style.opacity <= 0) {
+      clearInterval(intervalId);
+      overlay.style.display = 'none';
+    }
+  }, 30);
+});
+
+// function to show the overlay and user agreement form
+function showOverlay() {
+  // show the overlay and user agreement form
+  overlay.style.display = 'flex';
+}
+
+// call the showOverlay function to display the user agreement form
+showOverlay();
+</script>
+
+
+<script>
+const button = document.querySelector('#Fracture .top-bar .main-button');
+const img = document.querySelector('#Fracture .top-bar #main-button-image');
+let isHovering = false;
+let angle = 0;
+let spinSpeed = 5;
+const maxSpinSpeed = 20;
+const spinAcceleration = 0.2;
+
+button.addEventListener('mouseenter', () => {
+  isHovering = true;
+});
+
+button.addEventListener('mouseleave', () => {
+  isHovering = false;
+});
+
+function animateSpin() {
+  if (isHovering) {
+    if (spinSpeed < maxSpinSpeed) {
+      spinSpeed += spinAcceleration;
+    }
+    angle += spinSpeed;
+  } else {
+    if (spinSpeed > 0) {
+      spinSpeed -= spinAcceleration;
+    }
+    angle += spinSpeed;
+  }
+  img.style.transform = `rotate(${angle}deg)`;
+  requestAnimationFrame(animateSpin);
+}
+
+animateSpin();
+</script>
+
+
+
+
+
+
+
+
+
+<div id="Fracture">
+
+<div class="background">
+  <canvas id="MatrixBackground"></canvas>
+</div>
+
+
+
+<div class="top-bar">
+<button onmouseenter="startSpin()" onmouseleave="stopSpin()" onclick="showPage('page1')" class="main-button">
+  <img id='main-button-image' src="https://cdn.discordapp.com/attachments/800613712582148108/1096246677679120494/Logo.png" alt="Loading">
+  FractureGUI
+</button>
+  <button onclick="showPage('page2')" id="menu-button">Handbook</button>
+  <button onclick="showPage('page4')" id="menu-button">Polls</button>
+  <button onclick="showPage('page3')" id="menu-button">Discord</button>
+  <button id="menu-button"></button>
+  <button id="menu-button"></button>
+</div>
+
+
+
+<div id="page1" class="page">
+      <div style="width: 220px; height: 50px; border: 1px solid black;">
+      <p id="datetime" style="text-align: center;"></p>
+    </div>
+</div>
+
+
+
+<div id="page2" class="page">
+
+
+
+
+		<div class="blog-post">
+				<div class="blog-body">
+			<div class="blog-entry">
+				<div class="title">FractureGUI</div>
+				<div class="content">
+<h2>FractureGUI</h2>
+<h5>A Powerfull Program Running On HTML</h5>
+<h1>-------</h1>
+<h3>!!! Dowlaod Updates From The Updates Channel In The Discord !!!</h3>
+<h2>What Is FractureGUI?</h2>
+<p>FractureGUI is a program that runs on HTML, and ment to be used as a tool</p>
+<p>it hosts downloads for games and other programs it is a robust tool that took about 2 months to create</p>
+<p>it is owned and maintained by Fracture. It runs off of a MHv2 (Math Helpers v2) framework that is modifyed.</p>
+<h2>About MHv2</h2>
+<h5>What Is MHv2?<h5>
+<p>MHv2 is a discontinued Unblocked Games Website and Brand</p>
+<p>Fracture is a branch of it that is now the main branding and intulectual</p>
+<h2>User Agreement</h2>
+<p>Fracture acknowledges and agrees that it is solely responsible for the distribution of any files that circumvent school restrictions and violate school policies. Fracture also agrees to indemnify and hold harmless any creator or developer of such files from any and all claims, demands, liabilities, damages, losses, costs, and expenses (including reasonable attorney's fees) arising out of or in connection with the distribution or use of such files.
+<br>
+<br>
+Furthermore, Fracture understands and acknowledges that the distribution of such files may violate school policies and regulations, and may result in disciplinary action, legal consequences, or other penalties. Fracture assumes all risks associated with the distribution and use of such files and agrees to defend, indemnify and hold harmless the creator or developer of such files from any and all claims, damages, liabilities, losses, costs and expenses, including reasonable attorneys' fees, arising out of or in connection with any use or distribution of the files.
+</p>
+<h4>By downloading or using any of the files distributed by Fracture, users agree to assume all risks and responsibilities associated with their use, and agree to hold harmless the creator or developer of such files from any and all claims, damages, liabilities, losses, costs and expenses, including reasonable attorneys' fees, arising out of or in connection with the use or distribution of the files.</h4>
+
+<h2>Version Information</h2>
+<p>1.0.0</p>
+<h4>Version Legend</h4>
+<p> [Update ] . [Patch] . [Sub-Update] </p>
+<p>This file is still under construction and is in the alpha state, it is only released becuase it needs to be tested</p>
+<p>report bugs in the discord and add sugestions please we need some. Anyways have fun!</p>
+				</div>
+			</div>
+				</div>
+		</div>
+
+
+		<div class="blog-post">
+				<div class="blog-body">
+			<div class="blog-entry">
+				<div class="title">All About Proxys</div>
+				<div class="content">
+					<h2>What Is A Proxy?</h2>
+					<p>A proxy is a server separate from your wifi or interenet connection, you connect to it using a front end that displays the website you want through a iframe or other ways.
+					<h2>Can I Use Proxys On Website Builders?</h2>
+					<p>No.</p>
+					<h2>What Is A Front End?</h2>
+					<p>The front end is the nice little menu with the url bar that allows you to input your link.</p>
+					<p>Basicly a fancy way of saying the ui (User Interface)</p>
+					<h2>What Is A Backend?</h2>
+					<p>The Backend is the proxy itself, basicly its all the nice sexy fancy code stuff that makes it work.
+					<h2>How Can I Keep Them From Getting Blocked?</h2>
+					<p>Dont put links in google docs, make sure to ab (about:blank) cloak your links before using them, and dont be a dumbass</p>
+				</div>
+			</div>
+				</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+		<div class="blog-post">
+			<div class="blog-entry">
+				<div class="title">Game Ripping | 3kh0 | https://3kh0.github.io/blog/gamerip</div>
+				<div class="content">
+<h1>Howto: Game ripping</h1>
+      <h3>Introduction</h3>
+      <p>
+        Many people ask me (3kh0) how I get the games on my site, and now I can finally introduce the best (not underrated) tool, the network tab in your local inspect element! (I will be doing this in chrome since the layout in firefox is different and more people use chromium based browsers)
+      </p>
+      <h3>The Epic Hacker part</h3>
+      <img src="https://3kh0.github.io/blog/inspect.png">
+      <p>
+        I am going to just make a silly assumption that you know how to open inspect element on your browser/device, if you do not know how, look it up. I know this might look a little scary like omg what do all these crazy buttons do!??!/1 I will guide to step by step on what all this cool stuff is. So we will go from top to bottom, and we will only go over what is needed to know how to game rip. If you want to learn more, just play around with it or consult the wiki. THe screenshot above is the search page for google, (it is just google.com) and you can see, there is alot of stuff, that is because google is complex as fuck, so we will try something more simple.
+      </p>
+      <img src="https://3kh0.github.io/blog/example.png">
+      <p>
+        There something more simple. I went to the website example.com and this is what I see in my network tab. Focus on the chart where is has things like example.com and favicon, this is our request list, this is a list of all the requests that your browser had to make to assemble this page that you are looking at right now. Now you will want to click on the listing that says example.com
+      </p>
+      <img src="https://3kh0.github.io/blog/example2.png">
+      <p>
+        Wow look at all that useless stuff! I highlighted the only two things you need to look at and that is the Request URL and Status Code, that is pretty much all you need. Now you might be asking, well what is that red listing that says favicon? Ok, go click it, now look at the Request URL and Status code. It is requesting https://example.com/favicon.ico but the problem is, the server replied with code 404, what this means is that the server can not find this favicon.ico file, so that is why it is red. But notice how the webpage still looks fine. When game ripping, you need to make sure you ignore some of these requests. Things like the favicon are often 404 errors.
+      </p>
+      <p>
+        Alright, just as pratice, we are going to rip this website example.com just as a start. So open up your file explorer or any file indexing app and create a new folder, put the name as example. Now go back to the website, do ctrl+s (For Macs this is command+s) and it should save the HTML file for this page. If it pulls up a finder window asking where to save it, make sure you save it in your "example" folder. Now go to your example folder, right click the file you downloaded, open it with a web browser, and you should see the example.com website there. Congrats, you just ripped a website! Well this was only one file, so it was pretty easy. Lets try something harder.
+      </p>
+      <p>
+        Now I have a site with many files, like HTML, CSS, and JS files. Now if you do not already have a code editor like VS Code, I would download that right now, don't have it? Click <a href="https://code.visualstudio.com/Download" target="_blank">here</a>. I am not going to teach you how to use VS Code, I would find a tutorial online or something. Now that you have a code editor, this will make it much easier. Now create another folder, call it test1 or something, make sure you know where it is! Now open VS Code and click file and open folder, go to your folder, click select or ok and you should be in your folder. Here is the <a href="https://3kh0.github.io/personal-site/" target="_blank">website</a>. Now don't cheat and just copy it off of the GitHub repo, you are not learning silly. Ok first open up the network tab, do a refresh. Why do I need to reload it again? If you open it after the page has loaded then sometimes you miss some requests that were made before you opened the panel. Now note the file structure, you need to copy everything in 3kh0.github.io/personal-site/ anything else that goes to any other domain, you can leave alone. So download the homepage, drop it into your folder, and open it in your browser. Now it looks a little different than the original link. Open up the network tab and see what is wrong, and OMG THAT IS ALOT OF RED! Click on a few of them, most of them will have the Status code of 404, which means that your web browser can not find the file that is on your computer, so we will need to get those, note the request URL, hey I know where that would be! Now using VS Code, download the file that is on the server, on to your computer. Make sure it is in the right place, so like a JS file that is in the js folder on the site should be in a js folder in that test1 folder with all your other stuff, now make sure you only get stuff from the /personal-site/ folder, nothing else. Once you have gotten the main page to work, try clicking on the links on the top, it brings you to a 404 error. You know what do to! Download the pages and assets that are needed. Once you are done, compare with the <a href="https://github.com/3kh0/personal-site" target="_blank">GitHub repo</a>. If you got it spot on (cheater?) then good job! You are good at this. If the folder on your computer looks very different from Github repo, game ripping might not be for you. So find something else, idk. Good the skids are gone, moving on!
+      </p>
+      <p>
+        Now since you made light work of that repo, it is time you try something harder, see if you can rip a game off of itch.io. Make sure you know your limits, this kind of basic of game ripping will not work for online games. Big online game websites like poki have measures in place to stop game ripping such as cookie authentication, the way to bypass this to save from the network tab, if you right click the listing for the item, you should be able to save it, I have had varied success with this. As always, if you need more help or something went wrong, hit me up on <a href="https://discord.gg" target="_blank">discord</a>.
+      </p>
+      <p>- Echo</p>
+				</div>
+		</div>
+		</div>
+
+
+
+
+
+		<div class="blog-post">
+				<div class="blog-body">
+			<div class="blog-entry">
+				<div class="title"></div>
+				<div class="content">
+
+				</div>
+			</div>
+				</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+<div id="page3" class="page">
+<widgetbot
+    server="1098421824884322435"
+    channel="1098421825601536095"
+    width="100%"
+    height="83%"
+></widgetbot>
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+</div>
+
+<div id="page4" class="page">
+<h3></h3><!-- Start BawkBox Code--><script data-sil-id="6440991a4fce680013c84da8">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/simple-poll/6440991a4fce680013c84da8?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-simple-poll sil-widget" id="sil-widget-6440991a4fce680013c84da8"><a href="//bawkbox.com/install/simple-poll">Simple Polls</a></div><!-- End BawkBox Code-->
+</div>
+
+<div id="page#" class="page">
+
+</div>
+
+
+
+</div> <!-- Fracture Page Dont Paste Elements Past This -->
+
+
+
+
+
+    <script>
+function showPage(pageId) {
+  // Get all pages
+  var pages = document.getElementsByClassName("page");
+  
+  // Loop through all pages
+  for (var i = 0; i < pages.length; i++) {
+    // Hide all pages except for the one requested
+    if (pages[i].id === pageId) {
+      pages[i].style.display = "block";
+      pages[i].style.pointerEvents = "auto";
+    } else {
+      pages[i].style.display = "none";
+      pages[i].style.pointerEvents = "none";
+    }
+  }
+}
+
+// Show the default page (in this example, page 1)
+showPage('page1');
+    </script>
+
+
+
+
+	<script>
+var titles = document.querySelectorAll('.blog-entry .title');
+for (var i = 0; i < titles.length; i++) {
+  titles[i].addEventListener('click', function() {
+    var content = this.parentNode.querySelector('.content');
+    if (content.parentNode.classList.contains('expanded')) {
+      content.parentNode.classList.remove('expanded');
+      setTimeout(function() {
+        content.style.display = 'none';
+      }, 500); // wait for the transition to end before hiding the content
+    } else {
+      content.style.display = 'block';
+      content.parentNode.classList.add('expanded');
+    }
+  });
+}
+	</script>
+
+    <script>
+      function updateDateTime() {
+        var now = new Date();
+        var date = now.toDateString();
+        var time = now.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        document.getElementById('datetime').innerHTML = "Today is " + date + ", the time is " + time;
+      }
+
+      // update the date and time every second
+      setInterval(updateDateTime, 1000);
+    </script>
+
+
+<style>
+		@font-face {
+  font-family: 'Lexend Semi-Bold';
+  src: url('path/to/lexend-semibold.woff2') format('woff2'), /* Modern Browsers */
+       url('path/to/lexend-semibold.woff') format('woff'); /* Older Browsers */
+  font-weight: 100; /* Specify the font weight */
+  font-style: normal; /* Specify the font style */
+}
+body {
+  background-color: black;
+  transition: all 0.44s ease-in-out;
+  font-family: 'Lexend Semi-Bold', sans-serif;
+  color: white;
+}
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(0.7px); /* adjust the blur effect as desired */
+}
+.top-bar {
+  background-color: #390049;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+  height: 50px;
+  border-radius: 5px;
+  color: white;
+  
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+  			border: 0px solid #1d1d1d;
+			color: white;
+	position: relative;
+}
+
+#menu-button:hover {
+  font-size: 18px;
+  background-color: #5B0074;
+  transition: all 0.2s ease-in-out;
+}
+
+#menu-button {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: black;
+  font-size: 18px;
+  transition: all 0.5s ease-in-out;
+  			border: 0px solid #1d1d1d;
+  margin-right: 15px;
+  margin-left: 15px;
+  color: white;
+}
+
+.main-button:hover {
+  font-size: 18px;
+  background-color: #5B0074;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-button img {
+  height: 50px;
+  width: auto;
+  margin-right: 10px;
+}
+#Announcement {
+
+}
+	#blog-posts {
+	transition: height 0.5s ease;
+	}
+	
+		.blog-post {
+			background-color: #3A055B;
+			margin-bottom: 10px;
+			padding: 4px;
+			  transition: height 0.5s ease;
+		}
+		
+		.blog-entry {
+			background-color: #651299;
+			border: 1px solid #ccc;
+			padding: 8px;
+		}
+		.blog-body {
+		background-color: #651299;
+		}
+		
+		.blog-entry .title {
+			cursor: pointer;
+			font-size: 20px;
+			font-weight: bold;
+		}
+		
+		.blog-entry .content {
+			display: none;
+			margin-top: 10px;
+			background-color: #44056F;
+		}
+		.blog-entry .content {
+  display: none;
+  margin-top: 10px;
+  overflow: hidden;
+  height: 0;
+}
+
+.blog-entry.expanded .content {
+  display: block;
+  height: auto;
+}
+</style>
+
+
+
+ <script>
+      window.onload = function() {
+        const canvas = document.getElementById('MatrixBackground');
+        const chars = 'abcdefgyzhijklmnopQRSTUVABCDEFGYZ109467ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵﾘｱﾎﾃﾏｹﾒｴｶｷﾑﾕﾗｾﾈｽﾀﾇﾍ日¦｜:・."=*+-<>'; // Your chosen characters
+        const duration = 10000; // Duration of the matrix effect in milliseconds
+
+        // Get canvas context and set canvas size
+        const ctx = canvas.getContext('2d');
+        const w = canvas.width = window.innerWidth;
+        const h = canvas.height = window.innerHeight;
+
+        // Calculate number of columns and initialize y positions
+        const cols = Math.floor(w / 20) + 1;
+        const ypos = Array(cols).fill(0);
+
+        // Fill canvas with black color
+        ctx.fillStyle = '#000';
+        ctx.fillRect(0, 0, w, h);
+
+        // Create matrix effect function
+        const matrix = () => {
+          ctx.fillStyle = '#0001';
+          ctx.fillRect(0, 0, w, h);
+
+          ctx.fillStyle = '#C800FF';
+          ctx.font = '15pt monospace';
+
+          ypos.forEach((y, ind) => {
+            const text = chars[Math.floor(Math.random() * chars.length)];
+            const x = ind * 20;
+            ctx.fillText(text, x, y);
+            if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
+            else ypos[ind] = y + 20;
+          });
+        };
+
+        // Call matrix effect function every 50 milliseconds
+        const matrixInterval = setInterval(matrix, 50);
+      };
+    </script>
+	
+		<script>
+const canvas = document.getElementById("mousecanv");
+const ctx = canvas.getContext("2d");
+
+const radius = 20;
+let angle = 0;
+let speed = 0.01;
+let dotColor = "#000000";
+
+canvas.addEventListener("click", () => {
+  speed += 0.01;
+  dotColor = getRandomColor();
+});
+
+function getRandomColor() {
+  const colors = ["#FF4136", "#0074D9", "#2ECC40", "#FFDC00", "#AAAAAA"];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
+  
+  for (let i = 0; i < 3; i++) {
+    const dotX = centerX + Math.cos(angle + i * (2 * Math.PI / 3)) * radius;
+    const dotY = centerY + Math.sin(angle + i * (2 * Math.PI / 3)) * radius;
+    
+    // constrain dot within a 50x50px sphere
+    if (dotX < centerX - 25 || dotX > centerX + 25 || dotY < centerY - 25 || dotY > centerY + 25) {
+      continue;
+    }
+    
+    ctx.beginPath();
+    ctx.arc(dotX, dotY, 5, 0, 2 * Math.PI);
+    ctx.fillStyle = dotColor;
+    ctx.fill();
+  }
+  
+  angle += speed;
+  
+  requestAnimationFrame(draw);
+}
+
+draw();
+
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
