@@ -169,9 +169,9 @@ animateSpin();
   FractureGUI
 </button>
   <button onclick="showPage('page2')" id="menu-button">Handbook</button>
+  <button onclick="showPage('page5')" id="menu-button">Games</button>
   <button onclick="showPage('page4')" id="menu-button">Polls</button>
   <button onclick="showPage('page3')" id="menu-button">Discord</button>
-  <button id="menu-button"></button>
   <button id="menu-button"></button>
 </div>
 
@@ -346,6 +346,426 @@ Furthermore, Fracture understands and acknowledges that the distribution of such
 
 <div id="page4" class="page">
 <h3></h3><!-- Start BawkBox Code--><script data-sil-id="6440991a4fce680013c84da8">var loadWidget = function() { var d = document, w = window, l = window.location,p = l.protocol == "file:" ? "http://" : "//"; if (!w.WS) w.WS = {}; c = w.WS; var m=function(t, o){ var e = d.getElementsByTagName("script"); e=e[e.length-1]; var n = d.createElement(t); if (t=="script") {n.async=true;} for (k in o) n[k] = o[k]; e.parentNode.insertBefore(n, e)}; m("script", { src: p + "bawkbox.com/widget/simple-poll/6440991a4fce680013c84da8?page=" +encodeURIComponent(l+''), type: 'text/javascript' }); c.load_net = m; }; if(window.Squarespace){ document.addEventListener('DOMContentLoaded', loadWidget); setTimeOut(function(){ document.addEventListener('DOMContentLoaded', loadWidget); }, 3000) } else { loadWidget() } </script><div class="sil-widget-simple-poll sil-widget" id="sil-widget-6440991a4fce680013c84da8"><a href="//bawkbox.com/install/simple-poll">Simple Polls</a></div><!-- End BawkBox Code-->
+</div>
+
+<div id="page5" class="page">
+
+
+<div id="most-played-games" style="display:none;">
+  <h2>Most Played Games</h2>
+  <div id="most-played-games-list">
+    <!-- Most played games will be dynamically added here -->
+  </div>
+</div>
+
+
+
+
+
+  <div class="game-container">
+  
+    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1QGuzbHxy29zi54HmxmQ5vRTaYN7Aw4Kh">
+      <img class="game-image" src="https://imgs.search.brave.com/CEhZHpYSd1amyc7iv6f1KeyUfFF4dfob6_3te8nQgpE/rs:fit:900:900:1/g:ce/aHR0cHM6Ly92aXN0/YXBvaW50ZS5uZXQv/aW1hZ2VzL2FnYXJp/by13YWxscGFwZXIt/Ny5qcGc" />
+      <div class="game-name">AgarioLite</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1N3X_3OPscT14wVD4uNimSyolsl_MPeuF">
+      <img class="game-image" src="https://imgs.search.brave.com/HEyHPFzK4tcKvxN1lDKOhYuBzdslfMtSwSr-3Mpe7dc/rs:fit:600:600:1/g:ce/aHR0cHM6Ly9pbWcu/cG9raS5jb20vY2Ru/LWNnaS9pbWFnZS93/aWR0aD02MDAsaGVp/Z2h0PTYwMCxmaXQ9/Y292ZXIsZz0wLjUx/eDAuNDksZj1hdXRv/LzQ4N2FlMjNiLWFj/YzYtNDAyNi04ZjE1/LTQxMWMwNTUzOTk3/Yy5qcGc" />
+      <div class="game-name">Bloons Td 2</div>
+    </div>
+	  	    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1urAP3vWx8FThFvlF4kw2pPZM_XCrMCAA">
+      <img class="game-image" src="https://imgs.search.brave.com/nNSR0tm20v7x_ZA0HZmw79yWjXtu52v5-iB2G9mhSKQ/rs:fit:1200:1200:1/g:ce/aHR0cHM6Ly93d3cu/ZnJpdjVvbmxpbmUu/Y29tL2ZpbGVzL2lt/YWdlcy84Yy84Y2Jj/NWMyY2ExNzYyYjhl/NzAwZDJkMmEzZGY0/ZDY3Zi5qcGc" />
+      <div class="game-name">Basketball Stars</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=15qGBqW2lwzWPvzUrkugn8QnRlWAwor19">
+      <img class="game-image" src="https://imgs.search.brave.com/iMyFfrUj00HNfeqby_08FGWnNdYTVpDaFqu0_NsThiU/rs:fit:1200:707:1/g:ce/aHR0cHM6Ly9hc3Nl/dHMucGlraXJhbi1y/YWt5YXQuY29tL2Ny/b3AvMjE2eDI4Mzox/NDUyeDk5MC94L3Bo/b3RvLzIwMjIvMDIv/MjIvMjgzNTU3MDc3/Ni5wbmc" />
+      <div class="game-name">Cat Trap</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1fkQts_N4u-5CYtIFaf1LlpMsEbH9S3JT">
+      <img class="game-image" src="https://imgs.search.brave.com/nfPIwspkK2POQLcgXwfWpEngmShl23rrNkOtAm6Zod0/rs:fit:170:170:1/g:ce/aHR0cHM6Ly9pbWFn/ZS53aW51ZGYuY29t/L3YyL2ltYWdlMS9i/M0puTG1SaGMyaHVa/WFF1WTI5dmEybGxZ/MnhwWTJ0bGNsOXBZ/Mjl1WHpFMU5qVXpN/RFV6TkRaZk1ETXov/aWNvbi5wbmc_dz0x/NzAmZmFrZXVybD0x" />
+      <div class="game-name">Cookie Clicker</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1a8ZRPSqMEp8uon1EYRrxomRQ1icGxGzl">
+      <img class="game-image" src="https://imgs.search.brave.com/gAP53PnyeQ0xsj7Ga_0qxbMqZnIMZPHFNH6OJ2GLSr0/rs:fit:230:230:1/g:ce/aHR0cHM6Ly9jaGVh/dHN0Yy5jb20vcmV0/cm8tYm93bC9pbWcv/cmV0cm8tYm93bC1s/b2dvLmpwZw" />
+      <div class="game-name">Retro Bowl</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1Zy3J0hTJ2M_iMEQPHMZ8oFakjExUWxxA">
+      <img class="game-image" src="https://cdn.discordapp.com/attachments/800613712582148108/1098445780383182848/Paperminecraft.png" />
+      <div class="game-name">Paper Minecraft</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1LoGwZ1QL3LkExdSj7X3ZEqtekbQ1gZm2">
+      <img class="game-image" src="https://imgs.search.brave.com/RRnHj7XzxEz-UWSdgKbq1K2Q6AzntOzNQxYTK-fvKj4/rs:fit:1024:1024:1/g:ce/aHR0cHM6Ly9wbTEu/bmFydmlpLmNvbS83/MzkzL2MyYWU3NDAx/YjUzMDE2NjA2ODNm/MzMzZDkwMGI0YTVm/MjcyODg3YmNyMS0x/MjgwLTEyODB2Ml9o/cS5qcGc" />
+      <div class="game-name">FNAF1</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1vV4usXn57SQYBy5UmcF2UnzBMWEZW9LO">
+      <img class="game-image" src="https://imgs.search.brave.com/Yl7JRS2ILAgvlODOU-3rYrkNzNx7CTGMYhlRFaqeu8Q/rs:fit:300:300:1/g:ce/aHR0cHM6Ly9saDQu/Z2dwaHQuY29tL01G/eXdUN1FwblQ2V0Ey/dmdoMUZiMGJmYXoy/U2k0QlJDbldWNTNI/aXU5bHIxWnBFNnRK/X21QN0FtWHpDN2h5/MndGRmxEPXczMDA" />
+      <div class="game-name">Webretro</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1K1UUzVa7-b4guzegab-mnAZY_MeKRp2l">
+      <img class="game-image" src="https://www.nytimes.com/games-assets/v2/assets/wordle/wordle_logo_192x192.png" />
+      <div class="game-name">Wordle</div>
+    </div>
+		    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1h8w3WnKRhvfmtIlT43_vRRWpLGrd4KH9">
+      <img class="game-image" src="https://imgs.search.brave.com/6RAerTk-lFeQ9WkE12t3GEXEq0RCypy9kwZQ5E8vfWQ/rs:fit:369:369:1/g:ce/aHR0cHM6Ly92ZWN0/b3JpZmllZC5jb20v/aW1hZ2VzL29yZWdv/bi10cmFpbC1pY29u/LTI1LmpwZw" />
+      <div class="game-name">Oregon Trail Lite</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1mk_-MwO4fHSTfYkd0lQNnAh08rDbAepA">
+      <img class="game-image" src="https://raw.githack.com/3kh0/3kh0-assets/main/1/meta/apple-touch-icon.png" />
+      <div class="game-name">1</div>
+    </div>
+				    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1K1UUzVa7-b4guzegab-mnAZY_MeKRp2l">
+      <img class="game-image" src="https://raw.githack.com/3kh0/3kh0-assets/main/2048/thumb.png" />
+      <div class="game-name">2048</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1D77ysb_NZ3aayKWtczsWwe53vt16Br1s">
+      <img class="game-image" src="https://raw.githack.com/3kh0/3kh0-assets/main/chrome-dino/icons/icon-256.png" />
+      <div class="game-name">Dino Game</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1HindAo5Vpow4bxujjGz7_wKqwHzXyRBo">
+      <img class="game-image" src="https://imgs.search.brave.com/uKt7PeKBKcUpWH4_YWYb4uA5qRMVx5VbzMtqBUzvseI/rs:fit:1200:1200:1/g:ce/aHR0cDovL3d3dy5w/bmdtYXJ0LmNvbS9m/aWxlcy83L01pc3Np/bGUtUE5HLUZyZWUt/RG93bmxvYWQucG5n" />
+      <div class="game-name">Missile Game</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/file/d/1xYncYfc_cbNJfVvWIVynD5ajVTXqIo9G/view?usp=sharing">
+      <img class="game-image" src="https://imgs.search.brave.com/R6I0VSgX07Qf7iPua7vpG2M0BsjR3fVwpJ-2OHnHKL8/rs:fit:260:260:1/g:ce/aHR0cHM6Ly9nYW1l/Zm9yZ2UuY29tL2Rl/LURFL2xpdHRsZWdh/bWVzL2luY2x1ZGVz/L2ltYWdlcy9nYW1l/cy81OTE2XzVlYjNl/NzcyMDlkOGYuanBn" />
+      <div class="game-name">Rooftop Snipers</div>
+    </div>
+			    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1LxQaJbiiA5LWt58clGQpVtoZg0R_cJN8">
+      <img class="game-image" src="https://imgs.search.brave.com/SBcJ04O_zyzsyTKtW9BNdjc_uyEjoKSAMz4l3M-8284/rs:fit:360:360:1/g:ce/aHR0cHM6Ly9pbWcu/dGFwaW1nLmNvbS9t/YXJrZXQvbGNzL2Qy/YzdhNTkxNGY5NGJj/ZmM4MDkxNWMxMjQ0/OGI1MzVjXzM2MC5w/bmc_aW1hZ2VNb2dy/Mi9hdXRvLW9yaWVu/dC9zdHJpcA" />
+      <div class="game-name">Skribbl.io Embed</div>
+    </div>
+				    <div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1Tz9j_HV0he4ZwoW05UC5yl4OktN4t5Cz">
+      <img class="game-image" src="https://imgs.search.brave.com/o-zalqYYYZL-kZDQiT2j9kbxHQwgXH0wan_NVNkGvmg/rs:fit:600:600:1/g:ce/aHR0cHM6Ly9pbWcu/cG9raS5jb20vY2Ru/LWNnaS9pbWFnZS9x/dWFsaXR5PTc4LHdp/ZHRoPTYwMCxoZWln/aHQ9NjAwLGZpdD1j/b3ZlcixmPWF1dG8v/aHR0cHM6Ly9pbWcu/cG9raS5jb20vMjg1/OTMwYjY2YjgyZDhj/MWJhMWJhMDUxYTA1/YzgyZTAucG5n" />
+      <div class="game-name">A Small World Cup</div>
+    </div>
+	  			<div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1A-zY7ydkv75CT5KdHvZWvHztOUZGorUA">
+      <img class="game-image" src="https://play-lh.googleusercontent.com/gP8T5Z1O-ngxIloiwcBZzrzyLPYDp0R_1BDNKUDZboIRPVImeyWI8-7aExvB9gAGNKc" />
+      <div class="game-name">Basket Random</div>
+  </div>
+  	  			<div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1FHFhlCbxJWEDOGN3KY--XmChsnV6YaCS">
+      <img class="game-image" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c0446fe-bd1e-4371-aa2e-d408a19863a1/d9ocrwz-dc070c92-8bd2-449a-be76-b01e0ea4a826.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzljMDQ0NmZlLWJkMWUtNDM3MS1hYTJlLWQ0MDhhMTk4NjNhMVwvZDlvY3J3ei1kYzA3MGM5Mi04YmQyLTQ0OWEtYmU3Ni1iMDFlMGVhNGE4MjYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Ke3JKBG0hPzv8xGv1do3XxFNEAlrGr6RxpZ5bQaKioA" />
+      <div class="game-name">Weave Silk</div>
+  </div>
+    	  			<div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1KEi4BR_KMiQAzsW4rQxD80ugmuAhnssI">
+      <img class="game-image" src="https://preview.redd.it/2n6m5hicwte51.png?auto=webp&s=8b15656187a1aa3f63e6d558b529c215c8c632a6" />
+      <div class="game-name">Twitch Tetris</div>
+  </div>
+
+
+
+	<div class="game-square" data-link="https://drive.google.com/uc?export=download&id=1cqNZD5OStDJGJRBESwaM01PdHTohFT9B">
+      <img class="game-image" src="https://imgs.search.brave.com/u0ugHQzPcQS4W7_85bngp16dJ8NvsdbgH0mQEBqEkt8/rs:fit:170:170:1/g:ce/aHR0cHM6Ly9pbWFn/ZS53aW51ZGYuY29t/L3YyL2ltYWdlMS9i/RzlzTG05dVpYWnZi/bVZmYVdOdmJsOHhO/VGc0TlRJMk5qa3dY/ekF4TUEvaWNvbi5w/bmc_dz0xNzAmZmFr/ZXVybD0x" />
+      <div class="game-name">1v1.lol</div>
+	  
+<br>
+<br>
+<br>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	    </div>			    
+		
+
+	
+	
+	
+	
+	
+	
+	
+			<div hidden class="game-square" data-link="">
+      <img class="game-image" src="" />
+      <div class="game-name"></div>
+  </div>
+
+	
+  </div>
+
+  <div class="nogames">
+    <h1>¯\_(ツ)_/¯</h1>
+    <p>No results found. If you want to add a game, please make a suggestion to our <a class="linkiebtn" href="https://github.com/your-github-repo/issues">GitHub</a>.</p>
+  </div>
+
+<style>
+/* Games Css /*
+
+  
+
+
+
+  /* Styles for searchbar */
+    .searchbar {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 2px solid black;
+      border-radius: 12px;
+      font-size: 19px;
+      background-color: var(--background-color);
+    }
+
+    .game-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .game-square {
+      position: relative;
+      width: 170px;
+      height: 240px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid black;
+      border-radius: 5px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s;
+	  margin-top: 8px;
+	  margin-bottom: 8px;
+	  margin-left: 8px;
+	  margin-right: 8px;
+	  background-color: #7A0094;
+    }
+
+    .game-square:hover {
+      transform: scale(1.1);
+	    transition: all 0.2s ease-in-out;
+  animation: rainbow 5s linear infinite;
+  	text-align: center;
+				font-weight: bold;
+    }
+
+    .game-name {
+      font-size: 20px;
+      text-align: center;
+      margin-top: 6px;
+	  align-items: center;
+	  
+    }
+
+
+    /* Styles for nogames section */
+    .nogames {
+      text-align: center;
+      margin-top: 50px;
+	  display: none;
+    }
+
+    .nogames h1 {
+	text-align: center;
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+	
+	
+	
+	
+	
+/* Search spinner */
+.spinner {
+  display: none;
+  border: 10px solid rgb(0, 170, 215);
+  border-top: 10px solid #000;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 0.2s linear infinite;
+  position: absolute;
+  left: 45%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+      text-align: center;
+	  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+	
+
+
+
+
+    .game-image {
+      position: relative;
+	  margin-top: 8px;
+	  margin-right: auto;
+      width: 90%;
+      height: 80%;
+      align-items: center;
+	  margin-left: 8px;
+	  margin-right: 8px;
+	  border: 2px solid black;
+      border-radius: 5px;
+	  object-fit: cover;
+	  display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+/* Bounce effect */
+.game-square:hover .game-image {
+  animation: bounce 0.5s ease-out;
+}
+
+    @keyframes glint {
+      0% {
+        left: -50%;
+        opacity: 0;
+      }
+      50% {
+        left: 150%;
+        opacity: 1;
+      }
+      100% {
+        left: 150%;
+        opacity: 0;
+      }
+    }
+	
+	@keyframes bounce {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -10px);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  75% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+</style>
+  <script>
+const searchbar = document.querySelector(".searchbar");
+const gameSquares = document.querySelectorAll(".game-square");
+const nogames = document.querySelector(".nogames");
+const gamePlayer = document.querySelector(".game-player");
+const gamePlayerIframe = document.querySelector(".game-player iframe");
+const closeButton = document.querySelector(".game-player .close-button");
+const resetButton = document.querySelector(".reset-button");
+
+// Get the click counts from local storage or initialize an empty object
+let clickCounts = JSON.parse(localStorage.getItem("")) || {};
+
+// Add event listeners to the game squares to increment click counts and update local storage
+gameSquares.forEach(function(gameSquare) {
+  const gameName = gameSquare.querySelector(".game-name").textContent;
+  const gameLink = gameSquare.getAttribute("data-link");
+  let count = clickCounts[gameName] || 0;
+
+  gameSquare.addEventListener("click", function() {
+    count++;
+    clickCounts[gameName] = count;
+    localStorage.setItem("clickCounts", JSON.stringify(clickCounts));
+    window.location.href = ("src", gameLink);
+  });
+
+  gameSquare.setAttribute("data-clicks", count);
+});
+
+// Sort the game squares by click count when the page loads
+const gameContainer = document.querySelector(".game-container");
+const sortedGameSquares = Array.from(gameSquares).sort(function(a, b) {
+  return b.getAttribute("data-clicks") - a.getAttribute("data-clicks");
+});
+
+sortedGameSquares.forEach(function(gameSquare) {
+  gameContainer.appendChild(gameSquare);
+});
+
+searchbar.addEventListener("keyup", function(event) {
+  const query = event.target.value.toLowerCase();
+  let count = 0;
+  sortedGameSquares.forEach(function(gameSquare) {
+    const name = gameSquare.querySelector(".game-name").textContent.toLowerCase();
+    if (name.includes(query)) {
+      gameSquare.style.display = "";
+      count++;
+    } else {
+      gameSquare.style.display = "none";
+    }
+  });
+  if (count === 0) {
+    nogames.style.display = "block";
+  } else {
+    nogames.style.display = "none";
+  }
+});
+
+closeButton.addEventListener("click", function() {
+  gamePlayer.style.display = "none";
+  gamePlayerIframe.setAttribute("src", "");
+  document.body.style.overflow = "auto";
+});
+
+resetButton.addEventListener("click", function() {
+  localStorage.removeItem("clickCounts");
+  clickCounts = {};
+  sortedGameSquares.forEach(function(gameSquare) {
+    gameSquare.setAttribute("data-clicks", 0);
+  });
+  gameContainer.innerHTML = "";
+  gameSquares.forEach(function(gameSquare) {
+    gameContainer.appendChild(gameSquare);
+  });
+});
+  </script>
+  <script>
+const gamesArea = document.querySelector(".games-area");
+const injectButton = document.querySelector("#inject-games-button");
+
+injectButton.addEventListener("click", function() {
+  const fileInput = document.createElement("input");
+  fileInput.type = "file";
+  fileInput.accept = ".html";
+
+  fileInput.addEventListener("change", function() {
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+
+    reader.addEventListener("load", function() {
+      const gameDivs = parseGameDivs(reader.result);
+      gameDivs.forEach(function(gameDiv) {
+        gamesArea.appendChild(gameDiv);
+      });
+    });
+
+    reader.readAsText(file);
+  });
+
+  fileInput.click();
+});
+
+function parseGameDivs(text) {
+  const tempDiv = document.createElement("div");
+  tempDiv.innerHTML = text;
+  const gameDivs = tempDiv.querySelectorAll(".game-square");
+  return gameDivs;
+}
+  </script>
 </div>
 
 <div id="page#" class="page">
